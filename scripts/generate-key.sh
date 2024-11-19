@@ -25,12 +25,12 @@ fi
 echo "$MONGO_REPLICA_SET_KEY" > "$CONFIG_DIR/keyfile"
 
 # Set proper permissions (required by MongoDB)
-chmod 400 "$CONFIG_DIR/keyfile"
+sudo chmod 400 "$CONFIG_DIR/keyfile"
 
 # Set ownership to mongodb user (UID 999 in official mongo image)
 if command -v docker &> /dev/null; then
     # If running in a system with Docker
-    chown 999:999 "$CONFIG_DIR/keyfile"
+    sudo chown 999:999 "$CONFIG_DIR/keyfile"
 else
     echo "Warning: Docker not found. Please ensure keyfile ownership is set to mongodb user in your environment."
 fi
