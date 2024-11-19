@@ -66,7 +66,7 @@ services:
       resources:
         limits:
           cpus: '${MONGO_CPU_LIMIT}'
-          memory: ${MONGO_MEMORY_LIMIT}
+          # memory: ${MONGO_MEMORY_LIMIT}
         reservations:
           cpus: '${MONGO_CPU_RESERVATION}'
           memory: ${MONGO_MEMORY_RESERVATION}
@@ -99,7 +99,7 @@ services:
       resources:
         limits:
           cpus: '${MONGO_CPU_LIMIT}'
-          memory: ${MONGO_MEMORY_LIMIT}
+          # memory: ${MONGO_MEMORY_LIMIT}
         reservations:
           cpus: '${MONGO_CPU_RESERVATION}'
           memory: ${MONGO_MEMORY_RESERVATION}
